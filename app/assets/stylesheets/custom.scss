@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets"; 
 @import "bootstrap";
 
+/* Mixins, varables etc. */
+@mixin box-sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 $light-grey: #777;
 
 /* universal */
@@ -131,6 +137,18 @@ aside {
 	.gravatar_edit {
 		margin-top: 15px;
 	}
+}
+
+/* Forms */
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 100%;
+	margin: 0 0 15px;
+	@include box-sizing;
+}
+
+input {
+	height: auto !important;
 }
 
 /* Micellaneous */
