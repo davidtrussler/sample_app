@@ -168,6 +168,11 @@ input {
 	}
 }
 
+/* Dropdown menu */
+.dropdown-menu.active {
+	display: block;
+}
+
 /* Micellaneous */
 .debug_dump {
 	float: left;
