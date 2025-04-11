@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # Log in user
       reset_session
+      remember user
       log_in user
       redirect_to user
     else
